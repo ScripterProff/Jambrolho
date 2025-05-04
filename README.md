@@ -80,4 +80,7 @@ end
 RunService.RenderStepped:Connect(function() if not DrawingESP then for _, p in pairs(Players:GetPlayers()) do clearESP(p) end return end for _, p in pairs(Players:GetPlayers()) do updateESP(p) end end)
 
 ESPToggle.MouseButton1Click:Connect(function() DrawingESP = not DrawingESP ESPToggle.Text = DrawingESP and "ESP ON" or "ESP OFF" end)
+-- Ativar aba VISUALS por padrão
+tabs["VISUALS"].Visible = true
+activeTab = "VISUALS"
 
